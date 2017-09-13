@@ -9,11 +9,11 @@ emptySpace=20
 Triangle.rows(input).each do |r|
   puts " "*emptySpace + "#{r.inspect}"
   if emptySpace > 16
-  	emptySpace-=1
+    emptySpace-=1
   elsif emptySpace<17 && emptySpace>8
-  	emptySpace-=2
+    emptySpace-=2
   else
-  	emptySpace-=3
+    emptySpace-=3
   end
 end
 
