@@ -1,20 +1,14 @@
 require_relative "lib/triangle"
 
 while true
-  puts "Input 1-10 to chose how much lines to draw"
+  puts "Chose number between 1-15 to set how much rows to draw"
   input=gets.chop.to_i
-break if (1..10).include?(input)
+break if (1..15).include?(input)
 end
-emptySpace=20
-Triangle.rows(input).each do |r|
-  puts " "*emptySpace + "#{r.inspect}"
-  if emptySpace > 16
-    emptySpace-=1
-  elsif emptySpace<17 && emptySpace>8
-    emptySpace-=2
-  else
-    emptySpace-=3
-  end
+
+Triangle.rows(input).each do |row|
+	puts "%#{40+(row.inspect.length/2)}s" % [row.inspect]
 end
+
 
 
