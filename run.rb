@@ -7,7 +7,7 @@ break if (1..15).include?(input)
 end
 
 Triangle.rows(input).each do |row|
-	puts "%#{40+(row.inspect.length/2)}s" % [row.inspect]
+  puts "%#{40+(row.inspect.length/2)}s" % row.inspect
 end
 
 
